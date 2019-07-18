@@ -24,3 +24,11 @@ tasks.register<Zip>("zipSources") {
     from(sourceSets["main"].allJava)
     archiveClassifier.set("sources")
 }
+
+tasks.register("helloWorld") {
+    group = "welcome"
+    description = "Produces a greeting"
+    doFirst {
+        println("Hello World!")
+    }
+}
