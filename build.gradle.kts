@@ -1,3 +1,6 @@
+import javax.inject.Inject
+import java.time.Instant
+
 plugins {
     java
     application
@@ -26,21 +29,23 @@ tasks.register<Zip>("zipSources") {
 }
 
 tasks.register<Greeting>("helloWorld") {
-    recipient = "World"
+    recipient.set("World")
 }
 
 tasks.register<Greeting>("halloMannheim") {
-    message = "Hallo"
-    recipient = "Mannheim"
+    message.set("Hallo")
+    recipient.set(provider {
+        "Mannheim at ${Instant.now()}"
+    })
 }
 
-open class Greeting: DefaultTask() {
-    var message: String = "Hello"
-    lateinit var recipient: String
+open class Greeting @Inject constructor(objects: ObjectFactory): DefaultTask() {
+    val message = objects.property<String>().convention("Hello")
+    val recipient = objects.property<String>()
     init {
         group = "welcome"
         description = "Produces a greeting"
     }
     @TaskAction
-    fun print() = println("$message, $recipient!")
+    fun print() = println("${message.get()}, ${recipient.get()}!")
 }
