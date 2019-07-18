@@ -3,22 +3,13 @@ plugins {
     application
 }
 
+apply(from = rootProject.file("gradle/integration-test.gradle.kts"))
+
 repositories {
     jcenter()
 }
 
-val integrationTestSourceSet = sourceSets.create("integrationTest") {
-    compileClasspath += sourceSets.main.get().output
-    runtimeClasspath += sourceSets.main.get().output
-}
-
-val integrationTestImplementation by configurations.getting {
-    extendsFrom(configurations.testImplementation.get())
-}
-
-configurations.named(integrationTestSourceSet.runtimeOnlyConfigurationName) {
-    extendsFrom(configurations.testRuntimeOnly.get())
-}
+val integrationTestImplementation by configurations.getting
 
 dependencies {
     implementation(project(":lib"))
@@ -35,18 +26,4 @@ application {
 tasks.register<Zip>("zipSources") {
     from(sourceSets["main"].allJava)
     archiveClassifier.set("sources")
-}
-
-tasks {
-    val integrationTest by registering(Test::class) {
-        description = "Runs the integration tests."
-        group = "verification"
-        testClassesDirs = integrationTestSourceSet.output.classesDirs
-        classpath = integrationTestSourceSet.runtimeClasspath
-        mustRunAfter(test)
-    }
-
-    check {
-        dependsOn(integrationTest)
-    }
 }

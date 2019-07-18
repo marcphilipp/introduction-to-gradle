@@ -15,6 +15,7 @@ Please review the commit history of this repository from the start to see the ev
 - Centralize dependency version declarations in root build script
 - Make it a Spring Boot app to showcase BOM support
 - Introduce `integrationTest` source set and task
+- Extract `integrationTest` config into separate buildscript
 
 ## License
 
