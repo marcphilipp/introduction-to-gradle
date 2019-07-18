@@ -12,6 +12,7 @@ Please review the commit history of this repository from the start to see the ev
 - Convert the build into a multi-project build with `app` and `lib` subprojects
 - Illustrate difference between `api` and `implementation` dependencies
 - Use `subprojects` block to remove duplication
+- Centralize dependency version declarations in root build script
 
 ## License
 
