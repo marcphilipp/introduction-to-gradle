@@ -9,6 +9,7 @@ Please review the commit history of this repository from the start to see the ev
 - Define and use custom `Greeting` task class
 - Use the Provider API in the custom task class
 - Move custom task class to `buildSrc`
+- Convert the build into a multi-project build with `app` and `lib` subprojects
 
 ## License
 
