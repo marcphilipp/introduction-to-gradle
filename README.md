@@ -17,6 +17,7 @@ Please review the commit history of this repository from the start to see the ev
 - Introduce `integrationTest` source set and task
 - Extract `integrationTest` config into separate buildscript
 - Refactor build script into pre-compiled script plugin
+- Convert pre-compiled script plugin into binary plugin
 
 ## License
 
