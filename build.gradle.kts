@@ -1,5 +1,15 @@
 import java.time.Instant
 
+plugins {
+    id("com.gradle.build-scan") version "2.3"
+}
+
+buildScan {
+    tag("Demo")
+    link("GitHub", "https://github.com/marcphilipp/introduction-to-gradle")
+    value("location", "Mannheim")
+}
+
 tasks.register<Greeting>("helloWorld") {
     recipient.set("World")
 }

@@ -18,6 +18,7 @@ Please review the commit history of this repository from the start to see the ev
 - Extract `integrationTest` config into separate buildscript
 - Refactor build script into pre-compiled script plugin
 - Convert pre-compiled script plugin into binary plugin
+- Configure build scan plugin
 
 ## License
 
