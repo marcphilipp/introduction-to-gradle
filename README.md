@@ -14,6 +14,7 @@ Please review the commit history of this repository from the start to see the ev
 - Use `subprojects` block to remove duplication
 - Centralize dependency version declarations in root build script
 - Make it a Spring Boot app to showcase BOM support
+- Introduce `integrationTest` source set and task
 
 ## License
 
