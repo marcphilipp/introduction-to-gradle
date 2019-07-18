@@ -6,6 +6,7 @@ Please review the commit history of this repository from the start to see the ev
 - Use `gradle init` to create a new Java application project
 - Register `zipSources` task that reuses an existing task class
 - Add adhoc `helloWorld` task
+- Define and use custom `Greeting` task class
 
 ## License
 

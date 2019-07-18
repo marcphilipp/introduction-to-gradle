@@ -25,10 +25,22 @@ tasks.register<Zip>("zipSources") {
     archiveClassifier.set("sources")
 }
 
-tasks.register("helloWorld") {
-    group = "welcome"
-    description = "Produces a greeting"
-    doFirst {
-        println("Hello World!")
+tasks.register<Greeting>("helloWorld") {
+    recipient = "World"
+}
+
+tasks.register<Greeting>("halloMannheim") {
+    message = "Hallo"
+    recipient = "Mannheim"
+}
+
+open class Greeting: DefaultTask() {
+    var message: String = "Hello"
+    lateinit var recipient: String
+    init {
+        group = "welcome"
+        description = "Produces a greeting"
     }
+    @TaskAction
+    fun print() = println("$message, $recipient!")
 }
