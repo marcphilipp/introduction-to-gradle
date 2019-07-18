@@ -1,4 +1,3 @@
-import javax.inject.Inject
 import java.time.Instant
 
 plugins {
@@ -37,15 +36,4 @@ tasks.register<Greeting>("halloMannheim") {
     recipient.set(provider {
         "Mannheim at ${Instant.now()}"
     })
-}
-
-open class Greeting @Inject constructor(objects: ObjectFactory): DefaultTask() {
-    val message = objects.property<String>().convention("Hello")
-    val recipient = objects.property<String>()
-    init {
-        group = "welcome"
-        description = "Produces a greeting"
-    }
-    @TaskAction
-    fun print() = println("${message.get()}, ${recipient.get()}!")
 }

@@ -8,6 +8,7 @@ Please review the commit history of this repository from the start to see the ev
 - Add adhoc `helloWorld` task
 - Define and use custom `Greeting` task class
 - Use the Provider API in the custom task class
+- Move custom task class to `buildSrc`
 
 ## License
 
