@@ -21,6 +21,7 @@ subprojects {
             when (requested.name) {
                 "commons-math3" -> useVersion("3.6.1")
                 "guava" -> useVersion("28.0-jre")
+                "spring-boot-dependencies" -> useVersion("2.1.6.RELEASE")
             }
             when (requested.group) {
                 "org.junit.jupiter" -> useVersion("5.5.0")

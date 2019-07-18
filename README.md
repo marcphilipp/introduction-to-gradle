@@ -13,6 +13,7 @@ Please review the commit history of this repository from the start to see the ev
 - Illustrate difference between `api` and `implementation` dependencies
 - Use `subprojects` block to remove duplication
 - Centralize dependency version declarations in root build script
+- Make it a Spring Boot app to showcase BOM support
 
 ## License
 

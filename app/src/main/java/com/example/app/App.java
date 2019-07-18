@@ -3,15 +3,16 @@
  */
 package com.example.app;
 
-import org.example.lib.Library;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-        System.out.println(new Library().someOtherLibraryMethod());
+        SpringApplication.run(App.class, args);
     }
 }
