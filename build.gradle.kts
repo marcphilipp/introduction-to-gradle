@@ -19,3 +19,8 @@ application {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.register<Zip>("zipSources") {
+    from(sourceSets["main"].allJava)
+    archiveClassifier.set("sources")
+}
