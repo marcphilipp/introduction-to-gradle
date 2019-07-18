@@ -1,15 +1,12 @@
 plugins {
     java
     application
+    `integration-test`
 }
-
-apply(from = rootProject.file("gradle/integration-test.gradle.kts"))
 
 repositories {
     jcenter()
 }
-
-val integrationTestImplementation by configurations.getting
 
 dependencies {
     implementation(project(":lib"))

@@ -16,6 +16,7 @@ Please review the commit history of this repository from the start to see the ev
 - Make it a Spring Boot app to showcase BOM support
 - Introduce `integrationTest` source set and task
 - Extract `integrationTest` config into separate buildscript
+- Refactor build script into pre-compiled script plugin
 
 ## License
 
