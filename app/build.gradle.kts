@@ -16,10 +16,6 @@ application {
     mainClassName = "com.example.app.App"
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
 tasks.register<Zip>("zipSources") {
     from(sourceSets["main"].allJava)
     archiveClassifier.set("sources")

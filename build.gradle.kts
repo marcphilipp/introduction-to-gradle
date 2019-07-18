@@ -10,3 +10,9 @@ tasks.register<Greeting>("halloMannheim") {
         "Mannheim at ${Instant.now()}"
     })
 }
+
+subprojects {
+    tasks.withType<Test>().configureEach {
+        useJUnitPlatform()
+    }
+}
