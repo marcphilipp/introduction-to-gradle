@@ -3,6 +3,8 @@
  */
 package com.example.app;
 
+import org.example.lib.Library;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
@@ -10,5 +12,6 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        System.out.println(new Library().someOtherLibraryMethod());
     }
 }

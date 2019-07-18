@@ -10,6 +10,7 @@ Please review the commit history of this repository from the start to see the ev
 - Use the Provider API in the custom task class
 - Move custom task class to `buildSrc`
 - Convert the build into a multi-project build with `app` and `lib` subprojects
+- Illustrate difference between `api` and `implementation` dependencies
 
 ## License
 

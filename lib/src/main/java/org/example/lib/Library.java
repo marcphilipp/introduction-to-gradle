@@ -3,8 +3,16 @@
  */
 package org.example.lib;
 
+import com.google.common.collect.ImmutableSet;
+import org.apache.commons.math3.fraction.Fraction;
+
+import java.util.Set;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
+    }
+    public Set<Fraction> someOtherLibraryMethod() {
+        return ImmutableSet.of(Fraction.ONE_HALF, Fraction.ONE_QUARTER);
     }
 }

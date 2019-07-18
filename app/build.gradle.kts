@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:27.1-jre")
+    implementation(project(":lib"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
 }
 
